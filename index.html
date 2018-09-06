@@ -1,0 +1,19 @@
+<script src="jquery.min.js"></script>
+<button id = "vibration">VIBRATION</button>
+<button id = "vibrationPattern">PATTERN</button>
+<script>
+$(document).ready(function(){
+document.getElementById("vibration").addEventListener("click", vibration);
+document.getElementById("vibrationPattern").addEventListener("click", vibrationPattern);
+});
+
+function vibration() {
+   var time = 3000;
+   navigator.vibrate(time);
+}
+
+function vibrationPattern() {
+   var pattern = [1000, 1000, 1000, 1000];
+   navigator.vibrate(pattern);
+}
+</script>
